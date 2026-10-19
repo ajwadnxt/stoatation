@@ -19,7 +19,7 @@ registerDocsFunctions(client);
 
 client.command({
   name: "test",
-  aliases: [hello", "hi"],
+  aliases: ["hello", "hi"],
   code: `Hello there!`,
 });
 
