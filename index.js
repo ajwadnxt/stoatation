@@ -15,8 +15,6 @@ app.listen(PORT, () => {
 
 const client = new StoatlyClient({ prefix: "." });
 
-registerDocsFunctions(client);
-
 client.command({
   name: "test",
   aliases: ["hello", "hi"],
