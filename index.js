@@ -16,9 +16,8 @@ app.listen(PORT, () => {
 const client = new StoatlyClient({ prefix: "." });
 
 client.command({
-  name: "test",
-  aliases: ["hello", "hi"],
-  code: `Hello there!`,
+  name: "ping",
+  code: "Pong! \$ping ms", 
 });
 
 client.login(process.env.TOKEN);
