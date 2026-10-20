@@ -15,9 +15,10 @@ app.listen(PORT, () => {
 
 const client = new StoatlyClient({ prefix: "." });
 
-client.command({
-  name: "ping",
-  code: "Pong! \$ping ms", 
-});
+registerFunctions(client);
+
+for (const command of [...utility, ...fun, ...moderation]) {
+  client.command(command);
+}
 
 client.login(process.env.TOKEN);
